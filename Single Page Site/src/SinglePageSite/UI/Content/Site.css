@@ -1,0 +1,11 @@
+/* Normalization/Global Styles */
+* { margin: 0; padding: 0; }
+body { font: 0.8em Verdana; }
+ul { margin-left: 20px; }
+#Wrapper { background: #eee; padding: 10px; margin: 0 auto; width: 580px; }
+
+/* Navigation */
+ul#Navigation { float: left; margin: 0 0 10px 0; width: 100%; }
+ul#Navigation li { list-style-type: none; }
+ul#Navigation li a { background: #eee; border: solid 1px #666; color: #666; display: block; float: left; padding: 4px 8px; margin: 0 4px 0 0; text-decoration: none; }
+ul#Navigation li a:hover { background: #666; color: #fff; }

@@ -2,15 +2,19 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
+	<link rel="stylesheet" href="<%= Url.Content("~/Content/Site.css") %>" />
 	<script src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.min.js" type="text/javascript"></script>
 	<title>MVC Tech Demo: Single Page Site (CSS Method)</title>
 </head>
 <body>
-	<ul>
-		<li><%= Html.ActionLink("CSS Method", "Index", "CssMethod") %></li>
-		<li><%= Html.ActionLink("AJAX Method", "Index", "AjaxMethod") %></li>
-	</ul>
-	<asp:ContentPlaceHolder ID="Content" runat="server" />
+	<div id="Wrapper">
+		<ul id="Navigation">
+			<li><%= Html.ActionLink("Home", "Index", "Home") %></li>
+			<li><%= Html.ActionLink("CSS Method", "Index", "CssMethod") %></li>
+			<li><%= Html.ActionLink("AJAX Method", "Index", "AjaxMethod") %></li>
+		</ul>
+		<asp:ContentPlaceHolder ID="Content" runat="server" />
+	</div>
 	<asp:ContentPlaceHolder ID="Script" runat="server" />
 </body>
 </html>

@@ -1,16 +1,16 @@
 ﻿<asp:Content ContentPlaceHolderID="Content" runat="server">
 	<ul>
-		<li><a class="Page-Link" href="#Page-1">First Page</a></li>
-		<li><a class="Page-Link" href="#Page-2">Second Page</a></li>
-		<li><a class="Page-Link" href="#Page-3">Third Page</a></li>
+		<li><a class="Page-Link" href="#FirstPage">First Page</a></li>
+		<li><a class="Page-Link" href="#SecondPage">Second Page</a></li>
+		<li><a class="Page-Link" href="#ThirdPage">Third Page</a></li>
 	</ul>
-	<div class="Page" id="Page-1">
+	<div class="Page" id="FirstPage">
 		<% Html.RenderAction("FirstPage"); %>
 	</div>
-	<div class="Page" id="Page-2">
+	<div class="Page" id="SecondPage">
 		<% Html.RenderAction("SecondPage"); %>
 	</div>
-	<div class="Page" id="Page-3">
+	<div class="Page" id="ThirdPage">
 		<% Html.RenderAction("ThirdPage"); %>
 	</div>
 </asp:Content>
