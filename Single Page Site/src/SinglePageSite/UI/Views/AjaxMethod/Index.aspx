@@ -12,9 +12,10 @@
 	<script type="text/javascript">
 	//<![CDATA[
 
-		$(function() {
+		$(function () {
 			$('.Page-Link').click(pageSelected);
 			$('#Loading').hide();
+			$('.Page-Link:first').click();
 		});
 
 		function pageSelected(e) {

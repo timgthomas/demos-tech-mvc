@@ -15,7 +15,7 @@
 	//<![CDATA[
 
 		$(function() {
-			$('.Page-Link').live('click', pageSelected);
+			$('.Page-Link').click(pageSelected);
 			$('#Loading').hide();
 			$('.Page-Link:first').click();
 		});

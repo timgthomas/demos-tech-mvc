@@ -22,6 +22,7 @@
 		$(function() {
 			$('.Page-Link').click(pageSelected);
 			$('.Page').hide();
+			$('.Page-Link:first').click();
 		});
 
 		function pageSelected(e) {
