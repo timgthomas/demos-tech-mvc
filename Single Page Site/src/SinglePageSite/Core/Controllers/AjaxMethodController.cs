@@ -16,7 +16,7 @@ namespace Core.Controllers
 
 		public PartialViewResult SecondPage()
 		{
-			return PartialView("SecondPage");
+			return PartialView("SecondPage", Request.RequestType);
 		}
 
 		public PartialViewResult ThirdPage()
