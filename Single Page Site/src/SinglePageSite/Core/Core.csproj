@@ -46,6 +46,8 @@
     <Compile Include="Controllers\AjaxMethodController.cs" />
     <Compile Include="Controllers\CssMethodController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HybridMethodController.cs" />
+    <Compile Include="Controllers\MethodController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
