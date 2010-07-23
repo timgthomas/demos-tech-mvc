@@ -19,7 +19,7 @@
 	<script type="text/javascript">
 	//<![CDATA[
 
-		$(function () {
+		$(function() {
 			$('.Page-Link').click(pageSelected);
 			$('.Page').hide();
 		});

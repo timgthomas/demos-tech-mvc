@@ -5,7 +5,7 @@
 		<li><a class="Page-Link" href="#ThirdPage">Third Page</a></li>
 	</ul>
 	<span id="Loading">Loading...</span>
-	<div id="Page"></div>
+	<div class="Page" id="Page"></div>
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="Script" runat="server">
