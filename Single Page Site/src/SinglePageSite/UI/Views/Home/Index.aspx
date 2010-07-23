@@ -1,10 +1,3 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8" />
-	<title>MVC Tech Demo: Single Page Site</title>
-</head>
-<body>
-	
-</body>
-</html>
+﻿<asp:Content ContentPlaceHolderID="Content" runat="server">
+	[Home]
+</asp:Content>
