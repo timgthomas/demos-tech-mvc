@@ -7,13 +7,13 @@
 	<title>MVC Tech Demo: Single Page Site</title>
 </head>
 <body>
+	<ul id="Navigation">
+		<li><%= Html.ActionLink("Introduction", "Index", "Home") %></li>
+		<li><%= Html.ActionLink("CSS Method", "Index", "CssMethod") %></li>
+		<li><%= Html.ActionLink("AJAX Method", "Index", "AjaxMethod") %></li>
+		<li><%= Html.ActionLink("Hybrid Method", "Index", "HybridMethod") %></li>
+	</ul>
 	<div id="Wrapper">
-		<ul id="Navigation">
-			<li><%= Html.ActionLink("Introduction", "Index", "Home") %></li>
-			<li><%= Html.ActionLink("CSS Method", "Index", "CssMethod") %></li>
-			<li><%= Html.ActionLink("AJAX Method", "Index", "AjaxMethod") %></li>
-			<li><%= Html.ActionLink("Hybrid Method", "Index", "HybridMethod") %></li>
-		</ul>
 		<asp:ContentPlaceHolder ID="Content" runat="server" />
 	</div>
 	<asp:ContentPlaceHolder ID="Script" runat="server" />

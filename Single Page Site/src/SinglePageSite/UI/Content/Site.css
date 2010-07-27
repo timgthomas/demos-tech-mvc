@@ -4,10 +4,21 @@ body { font: 0.8em Verdana; }
 h2 { font-size: 1.0em; margin-top: 1.0em; }
 ul { margin: 10px 0 0 10px; }
 li { margin-left: 20px; }
-#Wrapper { background: #eee; padding: 10px; margin: 0 auto; width: 580px; }
+#Loading { display: block; float: right; height: 24px; line-height: 24px; margin-right: 20px; }
+#Wrapper { margin: 0 auto; width: 600px; }
 
 /* Navigation */
-ul#Navigation { float: left; margin: 0 0 10px 0; width: 100%; }
-ul#Navigation li { list-style-type: none; margin: 0; }
-ul#Navigation li a { background: #eee; border: solid 1px #666; color: #666; display: block; float: left; padding: 4px 8px; margin: 0 4px 0 0; text-decoration: none; }
+ul#Navigation { clear: right; height: 26px; margin: 10px auto; width: 600px; }
+ul#Navigation li { float: left; list-style-type: none; margin: 0; }
+ul#Navigation li a { background: #eee; border: solid 1px #666; color: #666; display: block; padding: 4px 8px; margin: 0 4px 0 0; text-decoration: none; }
 ul#Navigation li a:hover { background: #666; color: #fff; }
+
+/* Subnavigation */
+ul#Subnavigation { clear: right; float: left; height: 25px; margin: 0 0 0 10px; width: 100%; }
+ul#Subnavigation li { float: left; list-style-type: none; margin: 0; }
+ul#Subnavigation li a { background: #eee; border: solid 1px #666; color: #666; display: block; padding: 4px 8px; margin: 0 4px 0 0; text-decoration: none; }
+ul#Subnavigation li a.Active { border-bottom-color: #eee; }
+ul#Subnavigation li a:hover { background: #666; color: #fff; }
+
+/* Content */
+div#Content { background: #eee; border: solid 1px #666; clear: left; padding: 10px; }

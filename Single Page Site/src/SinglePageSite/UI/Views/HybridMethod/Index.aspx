@@ -1,13 +1,15 @@
 ﻿<asp:Content ContentPlaceHolderID="Content" runat="server">
-	<ul>
+	<ul id="Subnavigation">
+		<span id="Loading">Loading...</span>
 		<li><a class="Page-Link" href="#FirstPage">First Page</a></li>
 		<li><a class="Page-Link" href="#SecondPage">Second Page</a></li>
 		<li><a class="Page-Link" href="#ThirdPage">Third Page</a></li>
 	</ul>
-	<span id="Loading">Loading...</span>
-	<div class="Page" id="FirstPage"><% Html.RenderAction("FirstPage"); %></div>
-	<div class="Page" id="SecondPage"></div>
-	<div class="Page" id="ThirdPage"></div>
+	<div id="Content">
+		<div class="Page" id="FirstPage"><% Html.RenderAction("FirstPage"); %></div>
+		<div class="Page" id="SecondPage"></div>
+		<div class="Page" id="ThirdPage"></div>
+	</div>
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="Script" runat="server">
@@ -21,15 +23,19 @@
 		});
 
 		function pageSelected(e) {
+			$('.Page-Link').removeClass('Active');
+			$(this).addClass('Active');
 			var action = $(this).attr('href');
 			var pageExists = $(action).html() != '';
 
-			$('.Page').hide();
-			if(pageExists) {
+			if (pageExists) {
+				$('.Page').hide();
 				$(action).show();
 			} else {
 				$('#Loading').show();
-				$(action).load('<%= Url.Content("~/") %>HybridMethod/' + action.replace('#', ''), function () { $(action).show(); $('#Loading').hide(); });
+				$(action).load('<%= Url.Content("~/") %>HybridMethod/' + action.replace('#', ''), function () {
+					$('.Page').hide(); $(action).show(); $('#Loading').hide();
+				});
 			}
 
 			e.preventDefault();

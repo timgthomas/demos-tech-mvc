@@ -5,8 +5,12 @@
 
 	var elapsedTime = 0;
 
+	$(document).bind('load', function () { alert('Document bound') });
+
 	$(function () {
-		setInterval("tick()", 100);
+		$('#Stopwatch').load(function () {
+			setInterval("tick()", 100);
+		});
 	});
 
 	function tick() {
@@ -28,4 +32,4 @@
 	}
 
 	// ]]>
-	</script>
+</script>
