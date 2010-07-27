@@ -4,11 +4,6 @@ namespace Core.Controllers
 {
 	public abstract class MethodController : Controller
 	{
-		public ViewResult Index()
-		{
-			return View("Index");
-		}
-
 		public PartialViewResult FirstPage()
 		{
 			return PartialView("FirstPage");
@@ -16,7 +11,7 @@ namespace Core.Controllers
 
 		public PartialViewResult SecondPage()
 		{
-			return PartialView("SecondPage");
+			return PartialView("SecondPage", Request.HttpMethod);
 		}
 
 		public PartialViewResult ThirdPage()

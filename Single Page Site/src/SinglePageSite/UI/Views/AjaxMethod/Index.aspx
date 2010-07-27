@@ -20,8 +20,8 @@
 
 		function pageSelected(e) {
 			$('#Loading').show();
-			var action = $(this).attr('href').replace('#', '');
-			$('#Page').load('<%= Url.Content("~/") %>AjaxMethod/' + action, function() { $('#Loading').hide(); });
+			var action = $(this).attr('href');
+			$('#Page').load('<%= Url.Content("~/") %>AjaxMethod/' + action.replace('#', ''), function () { $(action).show(); $('#Loading').hide(); });
 			e.preventDefault();
 		}
 

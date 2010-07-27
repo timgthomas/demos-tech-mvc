@@ -1,7 +1,31 @@
 ﻿<p>This is the first page.</p>
-[Flash]
-<!--<object type="application/x-shockwave-flash" data="<%= Url.Content("~/Content/Stopwatch.swf") %>" width="580" height="32">
-	<param name="movie" value="<%= Url.Content("~/Content/Stopwatch.swf") %>" />
-	<param name="menu" value="false" />
-	<param name="quality" value="high" />
-</object>-->
+<p id="Stopwatch">00:00.0</p>
+<script type="text/javascript">
+	// <![CDATA[
+
+	var elapsedTime = 0;
+
+	$(function () {
+		setInterval("tick()", 100);
+	});
+
+	function tick() {
+		elapsedTime++;
+
+		var minutes = Math.floor(elapsedTime / 600);
+		var seconds = Math.floor(elapsedTime / 10) - minutes * 60;
+		var tenthSeconds = elapsedTime - minutes * 600 - seconds * 10;
+
+		var time = padLeft(minutes, 2, '0') + ':' + padLeft(seconds, 2, '0') + '.' + tenthSeconds;
+
+		$('#Stopwatch').html(time);
+	}
+
+	function padLeft(input, size, ch) {
+		input += "";
+		while (input.length < size) input = ch + input;
+		return input;
+	}
+
+	// ]]>
+	</script>

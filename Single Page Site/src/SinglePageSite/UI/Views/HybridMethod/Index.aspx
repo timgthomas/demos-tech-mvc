@@ -5,7 +5,7 @@
 		<li><a class="Page-Link" href="#ThirdPage">Third Page</a></li>
 	</ul>
 	<span id="Loading">Loading...</span>
-	<div class="Page" id="FirstPage"></div>
+	<div class="Page" id="FirstPage"><% Html.RenderAction("FirstPage"); %></div>
 	<div class="Page" id="SecondPage"></div>
 	<div class="Page" id="ThirdPage"></div>
 </asp:Content>
