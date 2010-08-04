@@ -17,8 +17,15 @@ ul#Navigation li a:hover { background: #666; color: #fff; }
 ul#Subnavigation { clear: right; float: left; height: 25px; margin: 0 0 0 10px; width: 100%; }
 ul#Subnavigation li { float: left; list-style-type: none; margin: 0; }
 ul#Subnavigation li a { background: #eee; border: solid 1px #666; color: #666; display: block; padding: 4px 8px; margin: 0 4px 0 0; text-decoration: none; }
-ul#Subnavigation li a.Active { border-bottom-color: #eee; }
+ul#Subnavigation li a.Active { border-bottom-color: #eee; position: relative; z-index: 1; }
 ul#Subnavigation li a:hover { background: #666; color: #fff; }
 
 /* Content */
-div#Content { background: #eee; border: solid 1px #666; clear: left; padding: 10px; }
+div#Content { background: #eee; border: solid 1px #666; clear: left; padding: 10px; position: relative; }
+
+/* 2) Async Requests */
+ul#Requests li { list-style-type: none; }
+ul#Requests li a { background: #fff; border: solid 1px #666; color: #666; display: block; padding: 4px 8px; margin: 0 auto 4px auto; text-align: center; text-decoration: none; width: 120px; }
+
+/* 4) Flash */
+.FlashPage-Hidden { height: 0 !important; visibility: hidden !important; }

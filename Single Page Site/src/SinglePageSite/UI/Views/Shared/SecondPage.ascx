@@ -2,8 +2,10 @@
 
 <div id="Result">
 	<p>The most recent request was of type &quot;<%= Model %>&quot; and was made at <%= DateTime.Now.ToString() %>.</p>
-	<a href="#" id="Link-GetRequest">Perform an asynchronous HTTP-GET request</a>
-	<a href="#" id="Link-PostRequest">Perform an asynchronous HTTP-POST request</a>
+	<ul id="Requests">
+		<li><a href="#" id="Link-GetRequest">HTTP-GET</a></li>
+		<li><a href="#" id="Link-PostRequest">HTTP-POST</a></li>
+	</ul>
 	<script type="text/javascript">
 	// <![CDATA[
 
